@@ -1,0 +1,21 @@
+let target = document.createElement("div");
+target.style.width = "50px";
+target.style.height = "50px";
+target.style.borderRadius = "25px";
+target.style.backgroundColor = "red";
+target.style.position = "absolute";
+document.body.appendChild(target);
+
+function moveTarget() {
+  let x = Math.random() * (window.innerWidth - 50);
+  let y = Math.random() * (window.innerHeight - 50);
+  target.style.left = x + "px";
+  target.style.top = y + "px";
+}
+
+moveTarget();
+setInterval(moveTarget, 1000);
+
+target.addEventListener("click", function() {
+  alert("GANASTE");
+});
